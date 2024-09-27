@@ -86,16 +86,6 @@ public class NotificationActionReceiver {
                 }
             }
             else{
-                if userInfo["gcm.message_id"] == nil {
-                    throw ExceptionFactory
-                        .shared
-                        .createNewAwesomeException(
-                            className: TAG,
-                            code: ExceptionCode.CODE_INVALID_ARGUMENTS,
-                            message: "The action content doesn't contain any awesome information",
-                            detailedCode: ExceptionCode.DETAILED_INVALID_ARGUMENTS + ".addNewActionEvent.jsonData")
-                }
-                
                 let title:String? = response.notification.request.content.title
                 let body:String? = response.notification.request.content.body
                 
